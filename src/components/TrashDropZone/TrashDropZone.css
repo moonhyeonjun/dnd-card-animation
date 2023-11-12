@@ -1,0 +1,19 @@
+.trashDropZone {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0;
+  margin: 10px auto;
+  width: 100%;
+  border: 1px solid #1e6cdb;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trashDropZone.active {
+  background: #1e6cdb;
+  color: #fff;
+  transition: 100ms all;
+}

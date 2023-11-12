@@ -1,121 +1,15 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.body {
-  display: flex;
-  flex-direction: row;
-}
-
-.sideBar {
-  flex: 0 0 1;
-  display: flex;
-  flex-direction: column;
-  justify-items: space-around;
-  width: 200px;
-  padding: 10px;
-  border-right: 1px solid #111;
-  background-color: #fff;
-  height: calc(100vh - 20px);
-}
-
-.sideBarItem {
-  border: 1px solid #2c2c2d;
-  border-radius: 3px;
-  height: 30px;
-  padding: 10px;
-  margin-top: 10px;
-  color: #fff;
-  background-color: #acacac;
-  cursor: pointer;
-}
-
-.page {
-  flex: 1 1 auto;
-  padding: 0 20px;
-  background-color: #1a59a9;
-  height: 100vh;
-  overflow-y: scroll;
-}
-
-.dropZone {
-  flex: 0 0 auto;
-  height: 40px;
-  transition: 200ms all;
-}
-
-.dropZone:nth-of-type(2n) {
-  display: none;
-}
-
-.dropZone.horizontalDrag {
-  width: 40px;
-  height: auto;
-}
-
-.dropZone:not(.horizontalDrag).isLast {
-  flex: 1 1 auto;
-}
-
-.dropZone.active {
-  background: #00a2ff;
-  transition: 100ms all;
-}
-
-.trashDropZone.active {
-  background: #6e3695;
-  color: #fff;
-  transition: 100ms all;
-}
-
-.component {
-  height: 60px;
-  padding: 10px;
-  background: #aaa;
-}
-
-.column {
-  border: 1px solid blue;
-  flex: 1 1 100%;
-  padding: 10px;
-}
-
-.columns {
-  display: flex;
-  padding: 20px 0;
-}
-
-.columnContainer {
-  display: flex;
-}
-
 .base {
   padding: 0.5rem 1rem;
   background-color: white;
   cursor: move;
 }
 
+.column {
+  flex: 1 1 100%;
+  padding: 10px;
+}
+
 .row {
   background-color: #9bc6d8;
   padding: 20px;
-}
-
-.trashDropZone {
-  position: relative;
-  text-align: center;
-  font-weight: bold;
-  padding: 20px 0;
-  margin: 10px auto;
-  width: 100%;
-  height: 10px;
-  border: 1px solid purple;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pageContainer {
-  flex: 1;
 }

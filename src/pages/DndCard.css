@@ -1,0 +1,28 @@
+.body {
+  display: flex;
+  flex-direction: row;
+}
+
+.sideBar {
+  flex: 0 0 1;
+  display: flex;
+  flex-direction: column;
+  justify-items: space-around;
+  width: 200px;
+  padding: 10px;
+  border-right: 1px solid #111;
+  background-color: #fff;
+  height: calc(100vh - 20px);
+}
+
+.pageContainer {
+  flex: 1;
+}
+
+.page {
+  flex: 1 1 auto;
+  padding: 0 10px;
+  background-color: #fff;
+  height: 100vh;
+  overflow-y: scroll;
+}

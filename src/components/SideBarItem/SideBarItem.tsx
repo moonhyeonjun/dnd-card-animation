@@ -2,6 +2,7 @@ import React from "react";
 import { useDrag, DragSourceMonitor } from "react-dnd";
 import { SIDEBAR_ITEM } from "constants/constants";
 import { SideBarItemProps } from "types";
+import "./SideBarItem.css";
 
 const SideBarItem: React.FC<SideBarItemProps> = ({ data }) => {
   const [{ opacity }, drag] = useDrag({
@@ -14,7 +15,7 @@ const SideBarItem: React.FC<SideBarItemProps> = ({ data }) => {
 
   return (
     <div className="sideBarItem" ref={drag} style={{ opacity }}>
-      {data.component.type}
+      {data.component.content}
     </div>
   );
 };

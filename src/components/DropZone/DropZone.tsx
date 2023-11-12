@@ -3,6 +3,7 @@ import classNames from "classnames";
 import { useDrop, DropTargetMonitor } from "react-dnd";
 import { COMPONENT, SIDEBAR_ITEM, ROW, COLUMN } from "constants/constants";
 import { LayoutItem, DropZoneProps } from "types";
+import "./DropZone.css";
 
 const ACCEPTS = [SIDEBAR_ITEM, COMPONENT, ROW, COLUMN];
 
@@ -72,23 +73,6 @@ const DropZone: React.FC<DropZoneProps> = ({
       isOver: monitor.isOver(),
       canDrop: monitor.canDrop(),
     }),
-    // hover 시 아이템의 위치를 변경
-    // hover: (item: LayoutItem, monitor: DropTargetMonitor) => {
-    //   if (!monitor.isOver({ shallow: true })) {
-    //     // Don't do anything if not hovering over the actual DropZone
-    //     return;
-    //   }
-
-    //   const draggedItem = monitor.getItem() as LayoutItem;
-    //   const draggedIndex = draggedItem.index;
-    //   const dropIndex = index;
-
-    //   // If the dragged item is different from the currently hovered item,
-    //   // update the order of items
-    //   if (draggedIndex !== dropIndex) {
-    //     onDrop(data, draggedItem);
-    //   }
-    // },
   });
 
   const isActive = isOver && canDrop;

@@ -2,10 +2,10 @@ import React, { useRef } from "react";
 import { useDrag } from "react-dnd";
 import { COLUMN } from "constants/constants";
 import { ComponentType, LayoutItem, GridProps } from "types";
-import DropZone from "./DropZone";
-import Component from "./Component";
+import DropZone from "../DropZone/DropZone";
+import Component from "../Component/Component";
+import "./Column.css";
 
-const style: React.CSSProperties = {};
 const Column: React.FC<GridProps> = ({
   data,
   components,
@@ -46,11 +46,7 @@ const Column: React.FC<GridProps> = ({
   };
 
   return (
-    <div
-      ref={ref}
-      style={{ ...style, opacity }}
-      className="base draggable column"
-    >
+    <div ref={ref} style={{ opacity }} className="base draggable column">
       {data.id}
       {data.children &&
         data.children.map((component, index) => {

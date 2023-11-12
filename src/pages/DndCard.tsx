@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from "react";
-import DropZone from "components/DropZone";
-import TrashDropZone from "components/TrashDropZone";
-import SideBarItem from "components/SideBarItem";
-import Row from "components/Row";
+import DropZone from "components/DropZone/DropZone";
+import TrashDropZone from "components/TrashDropZone/TrashDropZone";
+import SideBarItem from "components/SideBarItem/SideBarItem";
+import Row from "components/Row/Row";
 import initialData from "data/initial-data";
 import {
   handleMoveWithinParent,
@@ -18,6 +18,7 @@ import {
 } from "constants/constants";
 import { ComponentType, LayoutItem } from "types";
 import shortid from "shortid";
+import "./DndCard.css";
 
 const DndCardPage: React.FC = () => {
   const initialLayout: LayoutItem[] = initialData.layout;
@@ -103,14 +104,14 @@ const DndCardPage: React.FC = () => {
       }
 
       // 3. 이동 + 생성
-      setLayout(
-        handleMoveToDifferentParent(
-          layout,
-          splitDropZonePath,
-          splitItemPath,
-          newItem
-        )
-      );
+      // setLayout(
+      //   handleMoveToDifferentParent(
+      //     layout,
+      //     splitDropZonePath,
+      //     splitItemPath,
+      //     newItem
+      //   )
+      // );
     },
     [layout, components]
   );

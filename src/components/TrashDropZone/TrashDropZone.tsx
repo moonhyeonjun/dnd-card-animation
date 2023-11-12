@@ -3,6 +3,7 @@ import classNames from "classnames";
 import { useDrop, DropTargetMonitor } from "react-dnd";
 import { COMPONENT, ROW, COLUMN } from "constants/constants";
 import { TrashDropZoneProps } from "types";
+import "./TrashDropZone.css";
 
 const ACCEPTS = [ROW, COLUMN, COMPONENT];
 

@@ -48,6 +48,7 @@ export interface SideBarItemProps {
   data: {
     component: {
       type: string;
+      content: string;
     };
   };
 }

@@ -2,10 +2,9 @@ import React, { useRef } from "react";
 import { useDrag } from "react-dnd";
 import { ROW } from "constants/constants";
 import { LayoutItem, GridProps } from "types";
-import DropZone from "./DropZone";
-import Column from "./Column";
-
-const style: React.CSSProperties = {}; // Update with the actual type of 'style'
+import DropZone from "../DropZone/DropZone";
+import Column from "../Column/Column";
+import "./Row.css";
 
 const Row: React.FC<GridProps> = ({ data, components, handleDrop, path }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -43,7 +42,7 @@ const Row: React.FC<GridProps> = ({ data, components, handleDrop, path }) => {
   };
 
   return (
-    <div ref={ref} style={{ ...style, opacity }} className="base draggable row">
+    <div ref={ref} style={{ opacity }} className="base draggable row">
       {data.id}
       <div className="columns">
         {data.children &&

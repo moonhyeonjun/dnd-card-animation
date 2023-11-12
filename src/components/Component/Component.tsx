@@ -2,13 +2,7 @@ import React, { useRef } from "react";
 import { useDrag } from "react-dnd";
 import { COMPONENT } from "constants/constants";
 import { ComponentProps } from "types";
-
-const style: React.CSSProperties = {
-  border: "1px dashed black",
-  padding: "0.5rem 1rem",
-  backgroundColor: "white",
-  cursor: "move",
-};
+import "./Component.css";
 
 const Component: React.FC<ComponentProps> = ({ data, components, path }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -27,11 +21,7 @@ const Component: React.FC<ComponentProps> = ({ data, components, path }) => {
   const component = components[data.id];
 
   return (
-    <div
-      ref={ref}
-      style={{ ...style, opacity }}
-      className="component draggable"
-    >
+    <div ref={ref} style={{ opacity }} className="component draggable">
       <div>{data.id}</div>
       <div>{component.content}</div>
     </div>
